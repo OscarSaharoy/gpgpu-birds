@@ -646,8 +646,7 @@
 
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
-				const dpr = window.devicePixelRatio || 1;
-				birdUniforms.uResolution.value = new THREE.Vector2( window.innerWidth * dpr, window.innerHeight * dpr );
+				birdUniforms.uResolution.value = new THREE.Vector2( window.innerWidth, window.innerHeight );
 			}
 
 			function onPointerMove( event ) {
