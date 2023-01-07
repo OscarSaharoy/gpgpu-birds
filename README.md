@@ -1,3 +1,3 @@
 # gpgpu-birds
 
-[launch it](OscarSaharoy.github.io/gpgpu-birds/)
+[launch it](https://OscarSaharoy.github.io/gpgpu-birds/)
