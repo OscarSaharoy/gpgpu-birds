@@ -483,7 +483,6 @@
 				window.addEventListener( 'resize', onWindowResize );
 
 
-
 				const effectController = {
 					separation: 20.0,
 					alignment: 20.0,
@@ -569,8 +568,9 @@
 					'textureVelocity': { value: null },
 					'time': { value: 1.0 },
 					'delta': { value: 0.0 },
-					'uResolution': { value: new THREE.Vector2( window.innerWidth, window.innerHeight ) },
+					'uResolution': { value: new THREE.Vector2() },
 				};
+				renderer.getDrawingBufferSize(birdUniforms.uResolution.value);
 
 				// THREE.ShaderMaterial
 				const material = new THREE.ShaderMaterial( {
@@ -646,7 +646,7 @@
 
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
-				birdUniforms.uResolution.value = new THREE.Vector2( window.innerWidth, window.innerHeight );
+				renderer.getDrawingBufferSize( birdUniforms.uResolution.value );
 			}
 
 			function onPointerMove( event ) {
